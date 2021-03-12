@@ -1,5 +1,6 @@
 #include "connection.h"
 #include "QSqlDatabase"
+//test tuto GIT
 Connection::Connection()
 {
 

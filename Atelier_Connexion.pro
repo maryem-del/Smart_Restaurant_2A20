@@ -26,12 +26,14 @@ CONFIG += c++11
 
 SOURCES += \
     client.cpp \
+    enseignant.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp
 
 HEADERS += \
     client.h \
+    enseignant.h \
         mainwindow.h \
     connection.h
 

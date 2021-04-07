@@ -12,22 +12,26 @@ class plat
 {
 public:
     plat();
-    plat(int,QString,int,QDateTime);
+    plat(int,QString,int,QDateTime,int);
     int get_code_plat(){return codeplat;}
     QString get_matiere(){return matiere;}
     int get_cout(){return cout;}
     QString get_time();
+    int get_quantite(){return quantite;}
 
     bool ajouter();
     bool supprimer(int);
     QSqlQueryModel *afficher();
-    bool modifier(int,QString,int,QDateTime);
+    bool modifier(int,QString,int,QDateTime,int);
+    QSqlQueryModel * chercher(int);
+
 
 private:
     int codeplat;
     QString matiere;
     int cout;
     QDateTime jours;
+    int quantite;
 };
 
 #endif // PLAT_H

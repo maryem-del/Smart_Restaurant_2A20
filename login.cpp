@@ -8,8 +8,18 @@ login::login(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->setupUi(this);
-  //  son = new QSound("::/music.wav");
-   //son->play();
+    // son = new QSound("::/music.wav");
+    //son->play();
+    animation = new QPropertyAnimation(ui->pushButton_3,"geometry");
+    animation->setDuration(90000);
+    animation->setStartValue(ui->pushButton_3->geometry());
+    animation->setEndValue(QRectF(400,600,45,30));
+
+    QEasingCurve curve;
+    curve.setType(QEasingCurve::OutBounce);
+    animation->setEasingCurve(curve);
+
+    animation->start();
 
 }
 

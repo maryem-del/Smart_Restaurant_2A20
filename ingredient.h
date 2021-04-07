@@ -12,20 +12,25 @@ class ingredient
 {
 public:
     ingredient();
-    ingredient(int,QString,int);
+    ingredient(int,QString,int,int);
     int get_code_ingredient(){return codeingredient;}
     QString get_type_ingredient(){return type;}
     int get_prix_ingredient(){return prix;}
+    int get_quantite(){return quantite;}
 
     bool ajouter2();
     bool supprimer2(int);
     QSqlQueryModel *afficher2();
-    bool modifier2(int,QString,int);
+    bool modifier2(int,QString,int,int);
+    QSqlQueryModel *trier_codeingredient();
+    QSqlQueryModel *stat();
+
 
 private:
     int codeingredient;
     QString type;
     int prix;
+    int quantite;
 };
 
 

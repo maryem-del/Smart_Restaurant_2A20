@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1051</width>
-    <height>564</height>
+    <width>1072</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -77,7 +77,7 @@ border-bottom:1px solid #717072;
 </string>
     </property>
     <property name="title">
-     <string>Restau</string>
+     <string>PLATS</string>
     </property>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="geometry">
@@ -85,11 +85,11 @@ border-bottom:1px solid #717072;
        <x>0</x>
        <y>10</y>
        <width>981</width>
-       <height>541</height>
+       <height>531</height>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QTabWidget" name="tabWidget">
@@ -172,7 +172,7 @@ QTabBar::tab:selected{background-color: #363535; color: #008BEA;}
 </string>
        </property>
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
        <property name="documentMode">
         <bool>false</bool>
@@ -186,6 +186,139 @@ QTabBar::tab:selected{background-color: #363535; color: #008BEA;}
        <property name="tabBarAutoHide">
         <bool>false</bool>
        </property>
+       <widget class="QWidget" name="Afficher">
+        <attribute name="title">
+         <string>Afficher des plats</string>
+        </attribute>
+        <widget class="QTableView" name="tablePlat">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>691</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/new/white.png);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_rechercher">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>160</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Rechercher</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_saisir_2">
+         <property name="geometry">
+          <rect>
+           <x>730</x>
+           <y>60</y>
+           <width>221</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <underline>true</underline>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color:white;
+
+
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>               Saisir le code de plat à chercher :</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::RichText</enum>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_chercherplat">
+         <property name="geometry">
+          <rect>
+           <x>750</x>
+           <y>110</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:15px;
+</string>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_imprimer_9">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>280</y>
+           <width>101</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+
+QPushButton
+{
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
+border-radius:15px;
+}
+QPushButton:hover
+{
+color:black;
+border-radius:15px;
+background:rgb(197, 250, 255);
+}
+
+
+</string>
+         </property>
+         <property name="text">
+          <string>Imprimer Design</string>
+         </property>
+        </widget>
+       </widget>
        <widget class="QWidget" name="Ajouter">
         <attribute name="title">
          <string>Ajouter un plat</string>
@@ -215,7 +348,7 @@ QTabBar::tab:selected{background-color: #363535; color: #008BEA;}
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>240</y>
+           <y>220</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -232,7 +365,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>110</y>
+           <y>90</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -260,7 +393,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>160</x>
-           <y>110</y>
+           <y>90</y>
            <width>81</width>
            <height>31</height>
           </rect>
@@ -277,7 +410,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>160</x>
-           <y>60</y>
+           <y>40</y>
            <width>91</width>
            <height>31</height>
           </rect>
@@ -294,7 +427,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>60</y>
+           <y>40</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -322,7 +455,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>150</x>
-           <y>170</y>
+           <y>150</y>
            <width>101</width>
            <height>31</height>
           </rect>
@@ -339,7 +472,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>170</y>
+           <y>150</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -367,7 +500,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>310</x>
-           <y>240</y>
+           <y>220</y>
            <width>181</width>
            <height>31</height>
           </rect>
@@ -399,6 +532,51 @@ background:#ff5500;
            <month>11</month>
            <day>20</day>
           </date>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_quantite">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>280</y>
+           <width>121</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string>Quantite :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_quantiteplat">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>280</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:15px;
+</string>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </widget>
@@ -453,7 +631,7 @@ color:white;
          <property name="geometry">
           <rect>
            <x>140</x>
-           <y>120</y>
+           <y>100</y>
            <width>101</width>
            <height>31</height>
           </rect>
@@ -477,7 +655,7 @@ background:#ffaa00;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>123</y>
+           <y>103</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -505,7 +683,7 @@ background:#ffaa00;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>240</y>
+           <y>220</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -533,7 +711,7 @@ background:#ffaa00;</string>
          <property name="geometry">
           <rect>
            <x>110</x>
-           <y>240</y>
+           <y>220</y>
            <width>161</width>
            <height>31</height>
           </rect>
@@ -550,7 +728,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>130</x>
-           <y>180</y>
+           <y>160</y>
            <width>121</width>
            <height>31</height>
           </rect>
@@ -567,7 +745,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>300</x>
-           <y>180</y>
+           <y>160</y>
            <width>191</width>
            <height>31</height>
           </rect>
@@ -616,7 +794,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>100</x>
-           <y>310</y>
+           <y>280</y>
            <width>181</width>
            <height>31</height>
           </rect>
@@ -633,7 +811,7 @@ border-radius:15px;</string>
          <property name="geometry">
           <rect>
            <x>310</x>
-           <y>310</y>
+           <y>280</y>
            <width>181</width>
            <height>31</height>
           </rect>
@@ -673,6 +851,54 @@ background:#ff5500;
            <month>11</month>
            <day>20</day>
           </date>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_quantiteee">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>340</y>
+           <width>161</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string>Nouveau quantite :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_quantitemodifplat">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>340</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:15px;
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </widget>
@@ -809,201 +1035,6 @@ border-radius:15px;</string>
          </property>
          <property name="text">
           <string>SUPPRIMER</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QWidget" name="Afficher">
-        <attribute name="title">
-         <string>Afficher des plats</string>
-        </attribute>
-        <widget class="QTableView" name="tablePlat">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>20</y>
-           <width>691</width>
-           <height>331</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-image: url(:/new/white.png);</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_rechercher">
-         <property name="geometry">
-          <rect>
-           <x>800</x>
-           <y>150</y>
-           <width>101</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Rechercher</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_saisir_2">
-         <property name="geometry">
-          <rect>
-           <x>730</x>
-           <y>60</y>
-           <width>221</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>century gothic</family>
-           <pointsize>-1</pointsize>
-           <underline>true</underline>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-color:white;
-
-
-</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="text">
-          <string>               Saisir le code de plat à chercher :</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::RichText</enum>
-         </property>
-         <property name="scaledContents">
-          <bool>false</bool>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit_chercherplat">
-         <property name="geometry">
-          <rect>
-           <x>750</x>
-           <y>110</y>
-           <width>191</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>century gothic</family>
-           <pointsize>-1</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius:15px;
-</string>
-         </property>
-         <property name="maxLength">
-          <number>8</number>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_imprimer_10">
-         <property name="geometry">
-          <rect>
-           <x>740</x>
-           <y>230</y>
-           <width>101</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-
-QPushButton
-{
-background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
-border-radius:15px;
-}
-QPushButton:hover
-{
-color:black;
-border-radius:15px;
-background:rgb(197, 250, 255);
-}
-
-
-</string>
-         </property>
-         <property name="text">
-          <string>Imprimer Simple</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_imprimer_9">
-         <property name="geometry">
-          <rect>
-           <x>870</x>
-           <y>230</y>
-           <width>101</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-
-QPushButton
-{
-background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
-border-radius:15px;
-}
-QPushButton:hover
-{
-color:black;
-border-radius:15px;
-background:rgb(197, 250, 255);
-}
-
-
-</string>
-         </property>
-         <property name="text">
-          <string>Imprimer Design</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_imprimer_8">
-         <property name="geometry">
-          <rect>
-           <x>810</x>
-           <y>290</y>
-           <width>101</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-
-QPushButton
-{
-background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 0, 69), stop:0.375 rgba(255, 255, 0, 69), stop:0.423533 rgba(251, 255, 0, 145), stop:0.45 rgba(247, 255, 0, 208), stop:0.477581 rgba(255, 244, 71, 130), stop:0.518717 rgba(255, 218, 71, 130), stop:0.55 rgba(255, 255, 0, 255), stop:0.57754 rgba(255, 203, 0, 130), stop:0.625 rgba(255, 255, 0, 69), stop:1 rgba(255, 255, 0, 69));
-border-radius:15px;
-}
-QPushButton:hover
-{
-color:black;
-border-radius:15px;
-background:rgb(197, 250, 255);
-}
-
-
-</string>
-         </property>
-         <property name="text">
-          <string>Imprimer Double</string>
          </property>
         </widget>
        </widget>
@@ -1152,8 +1183,52 @@ QTabBar::tab:selected{background-color: #363535; color: #008BEA;}
 </string>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
+       <widget class="QWidget" name="Afficher_2">
+        <attribute name="title">
+         <string>Afficher ingrédients</string>
+        </attribute>
+        <widget class="QTableView" name="tableIng">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>741</width>
+           <height>341</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-image: url(:/new/white.png);</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_trie">
+         <property name="geometry">
+          <rect>
+           <x>830</x>
+           <y>200</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Trier</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_stat">
+         <property name="geometry">
+          <rect>
+           <x>830</x>
+           <y>130</y>
+           <width>91</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Statistique</string>
+         </property>
+        </widget>
+       </widget>
        <widget class="QWidget" name="Ajouter_2">
         <attribute name="title">
          <string>Ajouter un ingrédient</string>
@@ -1329,6 +1404,51 @@ color:black;
 border-radius:15px;
 background:#ff5500;
 }</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_quantitee">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>260</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+border-radius:15px;</string>
+         </property>
+         <property name="text">
+          <string>Quantite :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_quantiteing">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>260</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:15px;
+</string>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </widget>
@@ -1575,6 +1695,71 @@ background:#ff5500;
 }</string>
          </property>
         </widget>
+        <widget class="QLineEdit" name="lineEdit_quantitemodiing">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>280</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>century gothic</family>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius:15px;
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>8</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_quantite_2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>280</y>
+           <width>141</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+border-radius:15px;
+QLineEdit
+{
+background:#ffaa7f;
+border-radius:60px;
+}
+
+QLineEdit
+{
+color:black;
+border-radius:15px;
+}
+QLineEdit:hover
+{
+color:white;
+border-radius:15px;
+background:#ff5500;
+}</string>
+         </property>
+         <property name="text">
+          <string>Nouveau quantite :</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="Supprimer_2">
         <attribute name="title">
@@ -1697,50 +1882,6 @@ color:white;
          </property>
         </widget>
        </widget>
-       <widget class="QWidget" name="Afficher_2">
-        <attribute name="title">
-         <string>Afficher ingrédients</string>
-        </attribute>
-        <widget class="QTableView" name="tableIng">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>10</y>
-           <width>741</width>
-           <height>341</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-image: url(:/new/white.png);</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_trie">
-         <property name="geometry">
-          <rect>
-           <x>830</x>
-           <y>200</y>
-           <width>91</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Trier</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_trie_2">
-         <property name="geometry">
-          <rect>
-           <x>830</x>
-           <y>130</y>
-           <width>91</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>mail</string>
-         </property>
-        </widget>
-       </widget>
       </widget>
       <widget class="QPushButton" name="pushButton_2">
        <property name="geometry">
@@ -1798,19 +1939,44 @@ border-image: url(:/new/next1.png);</string>
       </widget>
      </widget>
     </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>550</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RETOUR</string>
+     </property>
+    </widget>
    </widget>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1051</width>
+     <width>1072</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPlats">
+    <property name="title">
+     <string>Plats</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuIngr_dient">
+    <property name="title">
+     <string>Ingrédient</string>
+    </property>
+   </widget>
+   <addaction name="menuPlats"/>
+   <addaction name="menuIngr_dient"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

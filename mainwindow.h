@@ -10,6 +10,7 @@
 #include <connection.h>
 
 #include "login.h"
+#include "secdialog.h"
 #include <QMessageBox>
 #include <QDialog>
 #include <QPropertyAnimation>
@@ -18,6 +19,8 @@
 #include <QMessageBox>
 #include <QApplication>
 #include <QtWidgets/QMainWindow>
+#include <qcustomplot.h>
+#include "qcustomplot.h"
 #include <QPdfWriter>
 #include <QPainter>
 #include <QMessageBox>
@@ -36,6 +39,20 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlTableModel>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QMessageBox>
+#include <QDesktopServices>
+#include <QUrl>
+#include<QDateTime>
+#include<QDate>
+#include <QRegExpValidator>
+#define CARACTERES_ETRANGERS "~{}[]()|-`'^ç@_]\"°01234567890+=£$*µ/§!?,.&#;><"
+#include<QIntValidator>
+#include "tableprinter.h"
+#include <QPrinter>
+#include <QPrintPreviewDialog>
+#include <QPainter>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -51,6 +68,8 @@ public:
     void afficher();
     void afficher2();
 private slots:
+    void print(QPrinter *printer);
+
     void on_pushButton_8_clicked();
 
     void on_pushButton_9_clicked();
@@ -71,12 +90,28 @@ private slots:
 
     void on_supprimerplat_clicked();
 
+    void on_pushButton_rechercher_clicked();
+
+    void on_pushButton_trie_clicked();
+
+    void on_pushButton_imprimer_9_clicked();
+
+    void uglyPrint(QPrinter *printer);
+
+
+    void on_pushButton_stat_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSound *son;
     QSqlTableModel *model;
     ingredient tmpingredient;
     plat tmpplat;
+    SecDialog *secDialog;
 
 };
 #endif // MAINWINDOW_H

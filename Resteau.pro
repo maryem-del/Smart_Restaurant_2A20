@@ -8,6 +8,8 @@ QT += widgets multimedia
 QT += printsupport
 QT +=gui
 QT += widgets
+DEFINES += QT_DEPRECATED_WARNINGS
+TARGET = Restau.pro
 
 CONFIG += c++11
 
@@ -21,18 +23,25 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    plat.cpp
+    plat.cpp \
+    qcustomplot.cpp \
+    secdialog.cpp \
+    tableprinter.cpp
 
 HEADERS += \
     connection.h \
     ingredient.h \
     login.h \
     mainwindow.h \
-    plat.h
+    plat.h \
+    qcustomplot.h \
+    secdialog.h \
+    tableprinter.h
 
 FORMS += \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    secdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -41,3 +50,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources.qrc
+
+DISTFILES += \
+    Electric  - 5 Minute Countdown.wav
